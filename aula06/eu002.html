@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>legal</title>
+</head>
+<body>
+   <script>
+      var nome = window.prompt('Qual o seu nome?')
+      var idade = Number(window.prompt('Quantos anos você tem?'))
+      var salario = Number(window.prompt('Quantos Reais você ganha por mês?'))
+      var ano100 = 100+2024-idade // ano em que voce completa 100 anos
+      var salario12 = (salario*12) // salario em 1 ano
+      var maioridade = idade>=18? 'é maior de idade então pode' : 'não é maior de idade, então, não pode'
+      var salariomim = salario>=1412? 'recebe mais que um salaio mínimo' : 'não recebe mais que um salaio mínimo'
+
+      document.write(`O seu nome é ${nome}, você tem ${idade} anos de idade, e ganha R$ ${salario} por mês <br/>`) 
+      document.write(`Agora vão algumas informações inúteis: seu nome tem ${nome.length} letas, voce fara 100 anos em ${ano100}, e ganha ${salario12.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})} por ano. </br>`)
+      document.write(`Você ${maioridade}: beber, dirigir e votar. Você ${salariomim}`)
+   </script>
+</body>
+</html>
